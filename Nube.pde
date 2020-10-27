@@ -1,9 +1,9 @@
 class Nube {
   weatherRequest wRequest;
   int cantidad; 
-  float [] tamX;
-  float [] tamY;
-  float [] wind_speed;
+  float [] tamX = new float [180];
+  float [] tamY = new float [180];
+  float [] wind_speed = new float [180];
   float [] posX = new float [180];
   float [] posY = new float [180];
   String timezone;
