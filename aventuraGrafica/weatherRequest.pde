@@ -1,5 +1,5 @@
 class weatherRequest { 
-  Nube nube;
+  Nube nube;  //JL: wRequest crea un objeto Nube y viceversa... it's okey?
   int onRequest;
   int halfSizeX;
   int halfSizeY;
@@ -22,7 +22,7 @@ class weatherRequest {
     GetRequest get = new GetRequest("https://api.openweathermap.org/data/2.5/onecall?lat="+yMaped+"&lon="+xMaped+"&appid=22c138f2c522f60863b5dd52b099283c");
     get.send();
     JSONObject response = null; 
-    response = parseJSONObject(get.getContent());
+    response = parseJSONObject(get.getContent());  //JL: muy potente esta conection!!
     JSONObject objNew = response.getJSONObject("current");
     this.lat = response.getFloat("lat");
     this.lon = response.getFloat("lon");

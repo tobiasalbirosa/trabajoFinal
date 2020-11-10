@@ -1,7 +1,7 @@
-import http.requests.*;  //no tengo esta librería, instalar
+import http.requests.*;  //JL: no tengo esta librería, instalar
 State state;
 void setup() {
-  frameRate(12);
+  frameRate(12);  //JL: a que se debe esta decisión?
   state = new State(0,0,width,height,"Empty");
   ellipseMode(CENTER);
   imageMode(CENTER);

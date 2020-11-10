@@ -1,11 +1,11 @@
-class Nube {
-  weatherRequest wRequest;
+class Nube {  //JL: si el objeto corresponde al conjunto de nubes capaz podría denominarse en plural: Nubes
+  //weatherRequest wRequest;  //JL: Nube crea un objeto wRequest y viceversa... it's okey?  > NO SE USA
   int cantidad; 
   float [] tamX;
   float [] tamY;
   float [] wind_speed;
   float [] posX = new float [180];
-  float [] posY = new float [180];
+  float [] posY = new float [180];  //JL: dudo si no sería mejor pensar una sola nuve y hacer un arreglo de objetos
   String timezone;
   PImage background = loadImage("map.png");
   Nube(float x, float y, int sizeX, int sizeY, float clouds, float temp, float speed, String timezone) {
@@ -59,7 +59,7 @@ class Nube {
     }
     popStyle();
   }
-  void reciclar(float x, float y, int sizeX, int sizeY, int i) {
+  void reciclar(float x, float y, int sizeX, int sizeY, int i) {  //JL: the best function ever
     posX[i] = random(x-sizeX/6, x+sizeX/6);
     posY[i] = random(y-sizeY/7, y+sizeY/7);
     tamX[i] = random(20, 100);
